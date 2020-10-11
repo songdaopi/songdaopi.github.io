@@ -22,7 +22,7 @@
 
   
 
-  <title>Archives: 2020 | site</title>
+  <title>test | site</title>
 
   
 
@@ -171,35 +171,114 @@
 </header>
 
     
-<div class="post-wrap archive">
+<article id="post">
+  <div class="post-title">test</div>
+  
+<div class="post-meta">
     
     
-        
-        
-        <div class="yearzodiac">
-                <div class="years">
-                  <h1>2020  <i class="symbolic-animals icon-rat"></i></h1>
-                </div>
-        </div>
-        
-        <li class="archive-item">
-            <a class="archive-item-link" href="/2020/10/11/test/">test</a>
-            <span class="archive-item-date">2020-10-11</span>
-        </li>
+      <div class="post-meta-item date">
+        <span title="Created 2020.10.11"><i class="far fa-calendar-alt"></i> 2020.10.11</span>
+      </div>
+      <div class="post-meta-item updated">
+        <span title="Updated 2020.10.11"><i class="far fa-calendar-check"></i> 2020.10.11</span>
+      </div>
+     
+     
     
-    <div class="arc_pag">
-       <nav class="paginator">
-      
-            
-</nav>
-
-     </div>
+     <div class="post-meta-item wordcount">
+        
+          <i class="fas fa-pencil-alt"></i> <span class="post-count">12 words</span>
+           
+        
+          <i class="far fa-clock"></i> <span class="post-count">1 min</span>
+                               
+      </div>
+     
 </div>
 
 
+  
+  <div class="content">
+        <div><h1 id="哈哈哈哈好"><a href="#哈哈哈哈好" class="headerlink" title="哈哈哈哈好"></a>哈哈哈哈好</h1><p>没有用的图片<br>qwq<br><img src= "/img/loading.gif" data-src="https://git.songdaopi.workers.dev/https://github.com/songdaopi/cache/blob/master/%E6%8D%95fd.PNG" alt="yyy" title="yyy"></p>
+</div>
+        
+          <div class="post-copyright">
+                  <div class="copyright-item">
+                      <span> Author: songdaopi</span>
+                  </div>
+                  <div class="copyright-item">
+                      <span> Link: <a href="http://example.com/2020/10/11/test/">http://example.com/2020/10/11/test/</a></span>
+                  </div>
+                  <div class="copyright-item">
+                      <span> License: 本博客所有文章除特别声明外，均采用许可协议 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> 转载请注明出处！</span>
+                  </div>
+          </div>
+        
+  </div>
+
+  <div class="share-reward">
+    <div class="share">
+        
+<div class="social-share" data-sites="facebook,twitter,wechat,weibo,qq"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script>
 
 
-
+      </div>
+        <div class="reward">
+          
+  <div style="padding: 10px 0; margin-left: 20px; width: 90%; text-align: center;">
+    <div class="reward-content">
+        <ul id="donateBox" class="list pos-a">
+          
+           <li id="PayPal"><a href="https://paypal.me" target="_blank" title="PayPal">PayPal</a></li>
+            
+          
+            <li id="AliPay" title="Alipay"><img data-img="/img/alipay.jpg" onerror=this.onerror=null,this.src="/img/loading.gif"></img></li>
+               
+                 
+            <li id="WeChat" title="Wechatpay"><img date-img="/img/wechat.jpg" onerror=this.onerror=null,this.src="/img/loading.gif"></img></li>
+                      
+          </ul>
+        <div id="QRBox" class="pos-f left-100">
+          <div id="MainBox"></div>
+        </div>
+    </div>
+  </div>
+  
+        </div>
+    </div>
+    
+    <div class="post_tags">
+      
+    </div>
+    <div class="post-nav">
+      
+      
+    </div>
+      
+    <div id="valine"></div>
+    <script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script>
+    <script>
+          new Valine({
+            el: '#valine',
+            appId: "",
+            appKey: "",
+            avatar: "mm",
+            lang: "",
+            meta: 'nick,mail,link'.split(','),
+            requiredFields: 'nick,mail'.split(','),
+            placeholder: "评论记得带上邮箱,你的留言我会马上收到邮箱提醒哒",
+            pageSize:'10',
+            recordIP: 'false',
+            serverURLs: "",
+            emojiCDN: "",
+            enableQQ: "true",
+          });
+    </script>
+    
+</article>
 
     
 <a id="gotop" href="javascript:" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
@@ -330,6 +409,45 @@ if (document.getElementsByClassName('mermaid').length) {
   
 
 
+  <script>
+    jQuery(document).ready(function () {
+      var QRBox = $('#QRBox');
+      var MainBox = $('#MainBox');
+      var AliPayQR = '/img/alipay.jpg';
+      var WeChanQR = '/img/wechat.jpg';
+
+      function showQR(QR) {
+        if (QR) {
+          MainBox.css('background-image', 'url(' + QR + ')');
+        }
+        $('#donateBox').addClass('blur');
+        QRBox.fadeIn(300, function (argument) {
+          MainBox.addClass('showQR');
+        });
+      }
+
+      $('#donateBox>li').click(function (event) {
+        var thisID = $(this).attr('id');
+        if (thisID === 'AliPay') {
+          showQR(AliPayQR);
+        } else if (thisID === 'WeChat') {
+          showQR(WeChanQR);
+        }
+      });
+
+      MainBox.click(function (event) {
+        MainBox.removeClass('showQR').addClass('hideQR');
+        setTimeout(function (a) {
+          QRBox.fadeOut(300, function (argument) {
+            MainBox.removeClass('hideQR');
+          });
+          $('#DonateText,#donateBox,#github').removeClass('blur');
+        }, 600);
+
+      });
+    });
+  </script>
+  
 
 
 
