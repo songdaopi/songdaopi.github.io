@@ -228,25 +228,6 @@
       </div>
         <div class="reward">
           
-  <div style="padding: 10px 0; margin-left: 20px; width: 90%; text-align: center;">
-    <div class="reward-content">
-        <ul id="donateBox" class="list pos-a">
-          
-           <li id="PayPal"><a href="https://paypal.me" target="_blank" title="PayPal">PayPal</a></li>
-            
-          
-            <li id="AliPay" title="Alipay"><img data-img="/img/alipay.jpg" onerror=this.onerror=null,this.src="/img/loading.gif"></img></li>
-               
-                 
-            <li id="WeChat" title="Wechatpay"><img date-img="/img/wechat.jpg" onerror=this.onerror=null,this.src="/img/loading.gif"></img></li>
-                      
-          </ul>
-        <div id="QRBox" class="pos-f left-100">
-          <div id="MainBox"></div>
-        </div>
-    </div>
-  </div>
-  
         </div>
     </div>
     
@@ -259,6 +240,10 @@
             <a href="/2020/10/11/tt/" >tt<i class="fa fa-chevron-left"></i></a>
         </div>
       
+      
+        <div class="post-nav-next post-nav-item">
+            <a href="/2020/10/05/%E4%BC%8F%E6%8B%89%E5%A4%AB/" >伏拉夫<i class="fa fa-chevron-right"></i></a>
+        </div>
       
     </div>
       
@@ -413,45 +398,6 @@ if (document.getElementsByClassName('mermaid').length) {
   
 
 
-  <script>
-    jQuery(document).ready(function () {
-      var QRBox = $('#QRBox');
-      var MainBox = $('#MainBox');
-      var AliPayQR = '/img/alipay.jpg';
-      var WeChanQR = '/img/wechat.jpg';
-
-      function showQR(QR) {
-        if (QR) {
-          MainBox.css('background-image', 'url(' + QR + ')');
-        }
-        $('#donateBox').addClass('blur');
-        QRBox.fadeIn(300, function (argument) {
-          MainBox.addClass('showQR');
-        });
-      }
-
-      $('#donateBox>li').click(function (event) {
-        var thisID = $(this).attr('id');
-        if (thisID === 'AliPay') {
-          showQR(AliPayQR);
-        } else if (thisID === 'WeChat') {
-          showQR(WeChanQR);
-        }
-      });
-
-      MainBox.click(function (event) {
-        MainBox.removeClass('showQR').addClass('hideQR');
-        setTimeout(function (a) {
-          QRBox.fadeOut(300, function (argument) {
-            MainBox.removeClass('hideQR');
-          });
-          $('#DonateText,#donateBox,#github').removeClass('blur');
-        }, 600);
-
-      });
-    });
-  </script>
-  
 
 
 
@@ -481,8 +427,6 @@ if (document.getElementsByClassName('mermaid').length) {
   
 
 
-  <script src="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/js/firework.js"></script>
-  
 
 
   <script src="/js/todark.js"></script>
