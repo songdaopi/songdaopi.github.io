@@ -64,17 +64,6 @@
                         
                         
                     <li class="layui-nav-item">
-                        <a href="/search/ ">
-                            <i class=" fas fa-search-plus " style="color: rgb(3 169 244);"></i>
-                            <span class="layui-nav-item-name">Search</span>
-                        </a>
-                    </li>
-                    
-                        
-                        
-                        
-                        
-                    <li class="layui-nav-item">
                         <a href="/ ">
                             <i class=" fab fa-fort-awesome " style="color: rgb(255 107 107);"></i>
                             <span class="layui-nav-item-name">Home</span>
@@ -264,6 +253,16 @@
 
  
 
+  <script src="/js/local-search.js"></script>
+<script type="text/javascript">      
+  var search_path = "search.xml";
+if (search_path.length == 0) {
+  search_path = "search.xml";
+}
+var path = "/" + search_path;
+  searchFunc(path, 'local-search-input', 'local-search-result');
+</script>
+  
 
 
   <script>
